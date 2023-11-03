@@ -7,14 +7,18 @@ import {
 } from 'react-router-dom';
 import App from '../../App';
 import { HomePage } from '../../pages/HomePage';
-import { LikesPage } from '../../pages/LikesPage';
+import { FavoriteShowsPage } from '../../pages/FavoriteShowsPage';
+import { CurrentShowPage } from '../../pages/CurrentShowPage';
 
 export const Root: React.FC = () => (
   <Router>
     <Routes>
       <Route path='/' element={<App />} >
         <Route index element={<HomePage />} />
-        <Route path='likes' element={<LikesPage />} />
+        <Route path='favorite-shows' element={<FavoriteShowsPage />} />
+        <Route path='show'>
+          <Route path=':showId' element={<CurrentShowPage />} />
+        </Route>
         <Route path='home' element={<Navigate to=".." replace />} />
         <Route path='*' element="Not Found" />
       </Route>
