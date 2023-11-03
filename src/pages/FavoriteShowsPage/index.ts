@@ -1,0 +1,1 @@
+export { FavoriteShowsPage } from './FavoriteShowsPage';
