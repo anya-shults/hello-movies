@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction, createAsyncThunk } from '@reduxjs/toolkit';
-import { ShowType } from '../../types/showType';
+import { ShowType } from '../types/showType';
 
 type ShowState = {
   shows: ShowType[],
